@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Test from './Test';
+import App from './App';
 
 export default class GraceHopperQuoteComponent extends Component {
 
@@ -12,7 +14,14 @@ export default class GraceHopperQuoteComponent extends Component {
 				</i>
 				<br />
 				&#9;-Admiral Grace Hopper
+				<div>{this.props.randomName}</div>
+				<Test myvalue={this.props.randomName}/>
+				<div>THIS IS JUST A TEST SENTENCE</div>
 			</div>
 		);
 	}
+}
+
+Test.defaultProps = {
+	myvalue: "This is default value"
 }
